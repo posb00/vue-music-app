@@ -1,5 +1,5 @@
 <template>
-    <!-- Header -->
+  <!-- Header -->
   <header id="header" class="bg-gray-700">
     <nav class="container mx-auto flex justify-start items-center py-5 px-4">
       <!-- App Name -->
@@ -9,8 +9,12 @@
         <ul class="flex flex-row mt-1">
           <!-- Navigation Links -->
           <li>
-            <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModal">
-                Login / Register
+            <a
+              href="#"
+              class="px-2 text-white"
+              @click.prevent="toggleAuthModal"
+            >
+              Login / Register
             </a>
           </li>
           <li>
@@ -22,14 +26,12 @@
   </header>
 </template>
 <script>
+import { mapMutations } from 'vuex';
+
 export default {
+  name: 'Header',
   methods: {
-    toggleAuthModal() {
-      this.$store.state.authModalShow = !this.$store.state.authModalShow;
-      console.log(this.$store.state.authModalShow);
-    },
+    ...mapMutations(['toggleAuthModal']),
   },
-
 };
-
 </script>
