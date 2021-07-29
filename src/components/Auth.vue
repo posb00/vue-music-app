@@ -145,7 +145,11 @@
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Password"
               />
-              <ErrorMessage class="text-red-600" name="password" />
+              <ErrorMessage
+                class="text-red-600"
+                name="password"
+                bails="false"
+              />
             </div>
             <!-- Confirm Password -->
             <div class="mb-3">
