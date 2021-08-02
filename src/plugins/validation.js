@@ -45,11 +45,14 @@ export default {
           min_value: `The field ${ctx.field} is too low`,
           max_value: `The field ${ctx.field} is to high`,
           exclude: `You are not allowed to user this value for the field ${ctx.field}.`,
-          country_excluded: 'Due to restrictions, we do not accept users from this location.',
+          country_excluded:
+            'Due to restrictions, we do not accept users from this location.',
           password_mismatch: "The passwords don't match.",
           tos: 'Yot must accept the Terms of Service.',
         };
-        const message = messages[ctx.rule.name] ? messages[ctx.rule.name] : `The field ${ctx.field} is invalid`;
+        const message = messages[ctx.rule.name]
+          ? messages[ctx.rule.name]
+          : `The field ${ctx.field} is invalid`;
         return message;
       },
       validateOnBlur: true,
